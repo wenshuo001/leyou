@@ -1,4 +1,4 @@
-package com.leyou.gateway;
+package com.leyou.item.pojo.gateway;
 
 
 import org.springframework.boot.SpringApplication;
