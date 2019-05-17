@@ -9,6 +9,6 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 @SpringCloudApplication
 public class LyGateway {
     public static void main(String[] args) {
-        SpringApplication.run(LyGateway.class,args);
+        SpringApplication.run(LyGateway.class);
     }
 }
