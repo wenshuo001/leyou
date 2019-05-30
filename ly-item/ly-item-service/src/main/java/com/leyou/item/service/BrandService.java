@@ -47,4 +47,11 @@ public class BrandService {
             this.brandMapper.insertCategoryBrand(cid, brand.getId());
         }
     }
+
+    @Transactional
+    public void delectBrand(String cid) {
+        // 删除品牌信息
+        this.brandMapper.deleteByPrimaryKey(cid);
+
+    }
 }

@@ -46,4 +46,16 @@ public class BrandController {
             service.saveBrand(brand,cids);
             return ResponseEntity.status(HttpStatus.CREATED).build();
     }
+
+    /**
+     * 删除品牌
+     * @param
+     * @param
+     * @return
+     */
+    @PostMapping
+    public ResponseEntity<Void> delectBrand(@RequestParam("id")String cid){
+        service.delectBrand(cid);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
 }

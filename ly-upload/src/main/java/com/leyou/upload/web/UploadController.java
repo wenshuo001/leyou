@@ -28,4 +28,11 @@ public class UploadController {
         // 返回200，并且携带url路径
         return ResponseEntity.ok(url);
     }
+
+    @PostMapping("file")
+    public ResponseEntity<String> uploadImage(@RequestParam("file")String file){
+        String url = file;
+
+        return ResponseEntity.ok(url);
+    }
 }

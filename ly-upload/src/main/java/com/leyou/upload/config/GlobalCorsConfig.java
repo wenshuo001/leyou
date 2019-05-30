@@ -1,4 +1,4 @@
-package com.leyou;
+package com.leyou.upload.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -6,6 +6,11 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
+/**
+ * @author li
+ * @time:2018/8/9
+ * 处理跨域请求的过滤器
+ */
 @Configuration
 public class GlobalCorsConfig {
     @Bean

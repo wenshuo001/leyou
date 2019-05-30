@@ -8,6 +8,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableDiscoveryClient
 public class LyUploadService {
     public static void main(String[] args) {
-        SpringApplication.run(LyUploadService.class, args);
+        SpringApplication.run(LyUploadService.class);
     }
 }
