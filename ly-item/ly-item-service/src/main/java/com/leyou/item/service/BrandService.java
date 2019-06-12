@@ -52,6 +52,6 @@ public class BrandService {
     public void delectBrand(String cid) {
         // 删除品牌信息
         this.brandMapper.deleteByPrimaryKey(cid);
-
+        this.brandMapper.deleteByBrandIdInCategoryBrand(Long.parseLong(cid));
     }
 }

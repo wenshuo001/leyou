@@ -2,6 +2,7 @@ package com.leyou.item.web;
 
 import com.leyou.common.pojo.PageResult;
 import com.leyou.item.pojo.Brand;
+import com.leyou.item.pojo.Category;
 import com.leyou.item.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("brand")
+@RequestMapping("/brand")
 public class BrandController {
     @Autowired
     private BrandService service;
@@ -21,7 +22,7 @@ public class BrandController {
      *
      * @return
      */
-    @GetMapping("page")
+    @GetMapping("/page")
     public ResponseEntity<PageResult<Brand>> queryBrandByPage(
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "5") Integer rows,
@@ -53,9 +54,19 @@ public class BrandController {
      * @param
      * @return
      */
-    @PostMapping
+     @PostMapping("delectBrand")
     public ResponseEntity<Void> delectBrand(@RequestParam("id")String cid){
         service.delectBrand(cid);
         return ResponseEntity.status(HttpStatus.CREATED).build();
+    }
+
+    /**
+     * 根据父节点id查询商品分类
+     * @return
+     */
+    @GetMapping("list")
+    public ResponseEntity<String> queryCategoryListByPid(){
+
+        return ResponseEntity.ok("访问成功");
     }
 }
